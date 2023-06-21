@@ -1,0 +1,21 @@
+<h1>New Shoes</h1>
+
+<%- include('../partials/header') %>
+
+<h2>Enter a New Shoe</h2>
+<form action="/shoes" method="POST">
+  <label>Brand:
+    <input type="text" name="brand">
+  </label><br>
+  <label>Size:
+    <input type="number" name="size">
+  </label><br>
+  <label>Color:
+    <select name="color">
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+    </select>
+  </label><br>
+  <input type="submit" value="Add Shoe">
+</form>
