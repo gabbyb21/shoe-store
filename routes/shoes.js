@@ -11,6 +11,11 @@ router.post('/', shoesCtrl.create);
 
 router.get('/', shoesCtrl.index);
 
-router.get('/:id/edit', shoesCtrl.edit);
+//working on this
+
+router.get('/:id', shoesCtrl.show)
+
+
+
 
 module.exports = router;

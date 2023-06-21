@@ -4,7 +4,8 @@ module.exports = {
   index,
   new: newShoes,
   create,
-  update
+  update,
+  show
 };
 
 
@@ -28,6 +29,19 @@ async function index(req, res) {
     shoes: shoesDetails
   })
 }
+//codes above work
+
+
+
+async function show(req,res){
+  // console.log(req.params.id)
+  const shoeDetails = await Shoe.findById(req.params.id)
+  res.render('shoes/show',{
+    shoe : shoeDetails,
+    title: 'Edit shoes'
+  } )
+}
+
 
 function update(req, res) {
   req.body.done = !!req.body.done;

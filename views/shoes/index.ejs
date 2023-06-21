@@ -11,7 +11,7 @@
 <tbody>
 <% shoes.forEach(function(s) { %>
   <tr>
-    <td><%= s.brand %></td>
+    <td> <a href="/shoes/<%=s._id%> "> <%= s.brand %> </a> </td>
     <td><%= s.size %></td>
     <td><%= s.color %></td>
   </tr>
