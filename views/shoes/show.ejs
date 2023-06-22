@@ -1,9 +1,13 @@
 <%- include('../partials/header') %>
 
-<h3>Brand: <%= shoe.brand %></h3>
-<h3>Size: <%= shoe.size %></h3>
-<h3>Color: <%= shoe.color %></h3>
-<%= shoe._id %>
+
+<h2>This pair's details:</h2>
+
+<h4>Brand: <%= shoe.brand %></h4>
+<h4>Size: <%= shoe.size %></h4>
+<h4>Color: <%= shoe.color %></h4>
+
 <a href="/shoes/<%= shoe._id %>/edit">Edit Shoe</a>
+
 
 <%- include('../partials/footer') %>

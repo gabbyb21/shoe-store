@@ -3,20 +3,31 @@
 <table>
   <thead>
     <tr>
-      <th>Brand</th>
-      <th>Size</th>
-      <th>Color</th>
+      <h2>My Collection:</h2>
+
     </tr>
   </thead>
 <tbody>
 <% shoes.forEach(function(s) { %>
   <tr>
     <td> <a href="/shoes/<%=s._id%> "> <%= s.brand %> </a> </td>
-    <td><%= s.size %></td>
-    <td><%= s.color %></td>
   </tr>
+  
 <% }) %>
 </tbody>  
 </table>
 
 <%- include('../partials/footer') %>
+
+
+
+
+
+
+
+
+
+
+
+
+

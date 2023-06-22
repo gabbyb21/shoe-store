@@ -2,11 +2,34 @@
 
 <!-- add code to show shoe that is being edited -->
 
+<!-- <h3>itttt</h3>
 <form action="/shoes/<%= shoe._id %>?_method=PUT" method="POST">
-  <input type="text" name="brand" value="<%= shoe.brand %>">
-  <input type="number" name="size" value="<%= shoe.size %>">
-  <input type="text" name="color" value="<%= shoe.color %>">
+  <input type="hidden" name="_method" value="PUT">
+  <input placeholder="Brand" type="text" name="brand" value="<%= shoe.brand %>">
+  <input placeholder="Size" type="number" name="size" value="<%= shoe.size %>">
+  <input placeholder="Colour" type="text" name="color" value="<%= shoe.color %>">
+  <input type="submit" value="Update Shoe">
+</form> -->
+
+
+
+<h3>Edit this pair to your preference</h3>
+<form action="/shoes/<%= shoe._id %>?_method=PUT" method="POST">
+  <input type="hidden" name="_method" value="PUT">
+  <input placeholder="Brand" type="text" name="brand" value="<%= shoe.brand %>">
+  <input placeholder="Size" type="number" name="size" value="<%= shoe.size %>">
+  <label>Color:
+    <select name="color">
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+    </select>
+  </label><br>
   <input type="submit" value="Update Shoe">
 </form>
+
+
+
+
 
 <%- include('../partials/footer') %>

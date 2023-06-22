@@ -11,14 +11,13 @@ router.post('/', shoesCtrl.create);
 
 router.get('/', shoesCtrl.index);
 
-//working on this
-
 router.get('/:id', shoesCtrl.show)
 
+
+//working on this
 router.get('/:id/edit', shoesCtrl.edit);
 
-
-
+router.put('/:id', shoesCtrl.update)
 
 
 
