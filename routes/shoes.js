@@ -15,6 +15,10 @@ router.get('/', shoesCtrl.index);
 
 router.get('/:id', shoesCtrl.show)
 
+router.get('/:id/edit', shoesCtrl.edit);
+
+
+
 
 
 

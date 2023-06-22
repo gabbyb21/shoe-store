@@ -5,7 +5,8 @@ module.exports = {
   new: newShoes,
   create,
   update,
-  show
+  show,
+  edit
 };
 
 
@@ -47,4 +48,14 @@ function update(req, res) {
   req.body.done = !!req.body.done;
   Shoe.update(req.params.id, req.body);
   res.redirect(`/shoes/${req.params.id}`);
+}
+
+
+
+function edit(req, res) {
+  const shoe = Shoe.findById(req.params.id);
+  res.render('shoes/edit', {
+    title: 'Edit Shoe',
+    shoe
+  });
 }

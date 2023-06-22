@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+
+<!-- add code to show shoe that is being edited -->
+
+<form action="/shoes/<%= shoe._id %>?_method=PUT" method="POST">
+  <input type="text" name="brand" value="<%= shoe.brand %>">
+  <input type="number" name="size" value="<%= shoe.size %>">
+  <input type="text" name="color" value="<%= shoe.color %>">
+  <input type="submit" value="Update Shoe">
+</form>
+
+<%- include('../partials/footer') %>
